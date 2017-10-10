@@ -2,7 +2,7 @@ body{
 	background:#DDDDDD;
 }
 #container{	
-	background-image: url('img/bg.jpg');
+	/*background-image: url('img/bg.jpg');*/
 	background-size: cover;
     /*border:1px #666 dashed;*/
     width:910px;

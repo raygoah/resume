@@ -1,28 +1,84 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>雷承勳的個人履歷</title>
-	<link rel="stylesheet" type="text/css" href="main.css">	
+	<title>雷承勳的個人履歷</title>	
+	<link rel="stylesheet" href="http://jaysalvat.github.io/vegas/releases/latest/vegas.min.css">
+	<script src="http://code.jquery.com/jquery.min.js"></script>
+	<script src="http://jaysalvat.github.io/vegas/releases/latest/vegas.js"></script>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="main.css">		
+	
+</body>
 </head>
-<body>
-	<div id="container">
+<body id='all'>
+	<div id="container" class="container">
 		<div id="self">	
 			<h1><a href="https://www.facebook.com/chengxun.lei"><img src="img/self.png"></a>雷承勳(Raygoah)</h1>			
 			<hr color="#666666" size="5">
 		</div>
 		<div id="git">
-			<li>GitHub Link: <a href="https://github.com/raygoah">click here</a></li>			
+			<p >GitHub Link: <a href="https://github.com/raygoah">click here</a></p>			
 		</div>		
-		<div id="introduction">
-			<li>University: NCKU</li>
-			<li>Department: CSIE</li>
-			<li>Born: Tainan</li>
-			<li>Age: 20</li>
-			<li>Language: C,C++,C#,Java</li>
-			<li>Hobby: travel</li>
+		<div id="introduction" >
+			<p id="text1">University: NCKU</p>
+			<p id="text2">Department: CSIE</p>
+			<p id="text3" style="display:none">Born: Tainan</p>
+			<p id="text4" style="display:none">Age: 20</p>
+			<p id="text5" style="display:none">Language: C,C++,C#,Java</p>
+			<p id="text6" style="display:none">Hobby: travel</p>
 		</div>
 		<hr color="#666666" size="5">
 	</div>
+	<script>
+		$('body').vegas({
+		 slides: [
+		 { src: 'img/bg4.jpg' },
+		 { src: 'img/bg3.jpg' },
+		 { src: 'img/bg.jpg' },
+		 { src: 'img/bg2.jpg' }
+		 ]
+		});
+	</script>
+	<script>
+		$('#container').vegas({
+		 slides: [
+		 { src: 'img/bg.jpg' },
+		 { src: 'img/bg2.jpg' },
+		 { src: 'img/bg5.jpg' },
+		 { src: 'img/bg4.jpg' }
+		 ]
+		});					
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function(){									
+			$('#text1').addClass('animated slideInLeft');
+			$('#text2').addClass('animated slideInLeft');												
+		});
+		
+		var myVar = setInterval(myTimer, 3000);		
 
+		function myTimer(){								
+			$('#text3').attr("style","display:block");
+			$('#text4').attr("style","display:block");
+			$('#text3').addClass('animated slideInRight');
+			$('#text4').addClass('animated slideInRight');
+													
+		}
+		var myVar2 = setInterval(myTimer2, 5000);
+		function myTimer2(){								
+			$('#text5').attr("style","display:block");
+			$('#text6').attr("style","display:block");
+			$('#text5').addClass('animated zoomInDown');
+			$('#text6').addClass('animated zoomInDown');										
+		}	
+		
+		
+		 
+		
+	</script>
+
+	
 </body>
 </html>
